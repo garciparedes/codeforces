@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my set of awesome solutions of Codeforces problems.
+This is my set of awesome solutions for Codeforces problems.
 
 ## Contents
 
