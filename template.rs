@@ -9,7 +9,7 @@ fn main() -> io::Result<()> {
         input.clear();
         io::stdin().read_line(&mut input)?;
     
-        let result = solve(&input);
+        let result = solve(&input.trim());
 
         println!("{}", result);
 
@@ -18,7 +18,7 @@ fn main() -> io::Result<()> {
     return Ok(());
 }
 
-fn solve(input: &String) -> String {
+fn solve(input: &str) -> String {
     let mut result = String::new();
 
     result.push_str(input);
