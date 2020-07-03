@@ -8,7 +8,6 @@ fn main() -> io::Result<()> {
     for _ in 0..n {
         input.clear();
         io::stdin().read_line(&mut input)?;
-    
         let result = solve(&input.trim());
 
         println!("{}", result);
@@ -20,8 +19,12 @@ fn main() -> io::Result<()> {
 
 fn solve(input: &str) -> String {
     let mut result = String::new();
-
-    result.push_str(input);
-
+    let n = input.len();
+    let pair = n % 2 == 0;
+    for (i, c) in input.chars().enumerate() {
+        if i % 2 == 0 || (pair && i == (n - 1)) {
+            result.push(c);
+        }
+    }
     return result;
 }
